@@ -16,7 +16,13 @@ jobs:
     - name: Install dependencies
       run: |
         sudo apt update
-        sudo apt install -y g++ make libftxui-dev
+        sudo apt install -y g++ make cmake git
+        git clone --recursive https://github.com/ArthurSonzogni/FTXUI.git
+        cd FTXUI
+        cmake -B build -S .
+        cmake --build build
+        sudo cmake --install build
+        cd ..
 
     - name: Build Habit Tracker
       run: make
