@@ -1,3 +1,5 @@
+> ⚠️ This project is currently in **beta** / under active development.
+> Features may change, and bugs may exist.
 # Habit Tracker
 
 A terminal-based **habit tracker and planner** written in **C++23** using [FTXUI](https://github.com/ArthurSonzogni/FTXUI). Track and manage your daily habits through an interactive terminal interface.
