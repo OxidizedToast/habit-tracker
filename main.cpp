@@ -8,19 +8,19 @@
 #include <iostream>
 #include <string>
 #include <vector>
+#include <print>
 
 // NOTE: The if statements do nothing but just make code easier for me to read
 void check_file_exists(const std::string &file_path) {
   if (std::filesystem::exists(file_path)) {
   } else {
-    std::cout << "File: " << file_path << " does not exists!" << std::endl;
+    std::print("File: {} does not exists!", file_path);
     std::ofstream new_file(file_path);
     if (!new_file) {
-      std::cout << "Failed to create file!" << std::endl;
+      std::print("Failed to create file!");
       std::exit(1);
     } else {
-      std::cout << "File: " << file_path << " created successfully!"
-                << std::endl;
+      std::print("File: {} created successfully!", file_path);
     }
   }
 }
@@ -29,9 +29,9 @@ void check_file_exists(const std::string &file_path) {
 void check_dir_exists(const std::string &dir, const std::string &file_path) {
   if (std::filesystem::exists(dir) && std::filesystem::is_directory(dir)) {
   } else {
-    std::cout << "Directory " << dir << " doesn't exist" << std::endl;
+    std::print("Directory {} doesn't exist", dir);
     std::filesystem::create_directory(dir);
-    std::cout << "Directory created!" << std::endl;
+    std::print("Directory created!");
     check_file_exists(file_path);
   }
 }
@@ -61,15 +61,15 @@ int main() {
 
   switch (selected) {
   case 0:
-    std::cout << "Reading habit..." << std::endl;
+    std::print("Reading habit...");
     // TODO: READ HABIT
     break;
   case 1:
-    std::cout << "Editing habit..." << std::endl;
+    std::print("Editing habit...");
     // TODO: Edit HABIT
     break;
   case 2:
-    std::cout << "Exiting..." << std::endl;
+    std::print("Exiting...");
     // Quits
     exit(0);
   }
