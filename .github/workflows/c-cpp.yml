@@ -16,7 +16,15 @@ jobs:
     - name: Install dependencies
       run: |
         sudo apt update
-        sudo apt install -y g++ make cmake git
+        sudo apt install -y software-properties-common make cmake git
+
+        # Install GCC 14
+        sudo add-apt-repository ppa:ubuntu-toolchain-r/test -y
+        sudo apt update
+        sudo apt install -y g++-14
+        sudo update-alternatives --install /usr/bin/g++ g++ /usr/bin/g++-14 100
+
+        # Build FTXUI
         git clone --recursive https://github.com/ArthurSonzogni/FTXUI.git
         cd FTXUI
         cmake -B build -S .
