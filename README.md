@@ -5,6 +5,7 @@
 A terminal-based **habit tracker and planner** written in **C++23** using [FTXUI](https://github.com/ArthurSonzogni/FTXUI). Track and manage your daily habits through an interactive terminal interface.
 
 ---
+[![Habit Tracker CI](https://github.com/OxidizedToast/habit-tracker/actions/workflows/c-cpp.yml/badge.svg)](https://github.com/OxidizedToast/habit-tracker/actions/workflows/c-cpp.yml)
 
 ## Features
 
