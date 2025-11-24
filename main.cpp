@@ -6,21 +6,21 @@
 #include <fstream>
 #include <functional>
 #include <iostream>
+#include <print>
 #include <string>
 #include <vector>
-#include <print>
 
 // NOTE: The if statements do nothing but just make code easier for me to read
 void check_file_exists(const std::string &file_path) {
   if (std::filesystem::exists(file_path)) {
   } else {
-    std::print("File: {} does not exists!", file_path);
+    std::print("File: {} does not exists! \n", file_path);
     std::ofstream new_file(file_path);
     if (!new_file) {
-      std::print("Failed to create file!");
+      std::print("Failed to create file! \n");
       std::exit(1);
     } else {
-      std::print("File: {} created successfully!", file_path);
+      std::print("File: {} created successfully! \n", file_path);
     }
   }
 }
@@ -29,9 +29,9 @@ void check_file_exists(const std::string &file_path) {
 void check_dir_exists(const std::string &dir, const std::string &file_path) {
   if (std::filesystem::exists(dir) && std::filesystem::is_directory(dir)) {
   } else {
-    std::print("Directory {} doesn't exist", dir);
+    std::print("Directory {} doesn't exist \n", dir);
     std::filesystem::create_directory(dir);
-    std::print("Directory created!");
+    std::print("Directory created! \n");
     check_file_exists(file_path);
   }
 }
@@ -60,18 +60,29 @@ int main() {
   screen.Loop(menu);
 
   switch (selected) {
-  case 0:
-    std::print("Reading habit...");
-    // TODO: READ HABIT
-    break;
-  case 1:
-    std::print("Editing habit...");
-    // TODO: Edit HABIT
-    break;
-  case 2:
-    std::print("Exiting...");
-    // Quits
-    exit(0);
+    case 0: {
+      system("clear");
+      // TODO: READ HABIT
+      bool is_empty = true;
+      std::string file_contents;
+      std::ifstream file_to_read(habit_file_path);
+      while (getline(file_to_read, file_contents)) {
+        std::print("{} \n", file_contents);
+        is_empty = false;
+      }
+      file_to_read.close();
+      if (is_empty){
+        std::print("File is empty! \n");
+      }
+    } break;
+    case 1: {
+      std::print("Editing habit... \n");
+      // TODO: Edit HABIT
+    } break;
+    case 2:
+      std::print("Exiting... \n");
+      // Quits
+      exit(0);
   }
 
   // TODO: Ask options if the user wants to modify their habit / routine list.
