@@ -53,7 +53,7 @@ Run the program:
 
 ## Requirements
 
-* C++23 compiler (e.g., `g++` or `clang++`)
+* C++23 compiler (e.g., `g++`)
 * [FTXUI](https://github.com/ArthurSonzogni/FTXUI)
 * Make (for building)
 
@@ -61,7 +61,7 @@ Run the program:
 
 ## Versioning
 
-Current version: `0.1.0` (Beta)
+Current version: `0.3.0` (Beta)
 
 Follows [Semantic Versioning](https://semver.org/):
 
