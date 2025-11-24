@@ -14,13 +14,10 @@
 void check_file_exists(const std::string &file_path) {
   if (std::filesystem::exists(file_path)) {
   } else {
-    std::print("File: {} does not exists! \n", file_path);
     std::ofstream new_file(file_path);
     if (!new_file) {
-      std::print("Failed to create file! \n");
+      std::print("Failed to create config/habit file! \n");
       std::exit(1);
-    } else {
-      std::print("File: {} created successfully! \n", file_path);
     }
   }
 }
@@ -29,9 +26,7 @@ void check_file_exists(const std::string &file_path) {
 void check_dir_exists(const std::string &dir, const std::string &file_path) {
   if (std::filesystem::exists(dir) && std::filesystem::is_directory(dir)) {
   } else {
-    std::print("Directory {} doesn't exist \n", dir);
     std::filesystem::create_directory(dir);
-    std::print("Directory created! \n");
     check_file_exists(file_path);
   }
 }
