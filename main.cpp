@@ -84,9 +84,5 @@ int main() {
       // Quits
       exit(0);
   }
-
-  // TODO: Ask options if the user wants to modify their habit / routine list.
-  // TODO: Make way for file to be read by the program to print out habit
-  // list/order
   return 0;
 }
