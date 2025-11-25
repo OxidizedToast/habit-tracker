@@ -73,7 +73,7 @@ Usage: ht [flag]\n"
 
 ## Versioning
 
-Current version: `0.3.0` (Beta)
+Current version: `0.3.1` (Beta)
 
 Follows [Semantic Versioning](https://semver.org/):
 
