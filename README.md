@@ -32,6 +32,17 @@ Run the program:
 
 ---
 
+## Commands
+
+```
+Usage: ht [flag]\n"
+    "Options:"
+    "--help     -h  Show this help screen"
+    "--version  -v  Show version number"
+```
+
+---
+
 ## Usage
 
 * Use arrow keys to navigate the interface
@@ -48,7 +59,7 @@ Run the program:
 * [ ] Display streaks and completion statistics
 * [ ] Save/load habit history more efficiently
 * [ ] Improve TUI navigation and usability
-* [ ] Add version display inside the app
+* [x] Add version display inside the app
 
 ---
 
@@ -62,7 +73,7 @@ Run the program:
 
 ## Versioning
 
-Current version: `0.3.0` (Beta)
+Current version: `0.4.0` (Beta)
 
 Follows [Semantic Versioning](https://semver.org/):
 
