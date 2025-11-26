@@ -18,16 +18,22 @@ A terminal-based **habit tracker and planner** written in **C++23** using [FTXUI
 
 ## Installation
 
-Clone the repository and build the project using the Makefile:
+Clone the repository and build the project using the Makefile or Cmake:
+### Makefile
+`git clone https://github.com/OxidizedToast/habit-tracker.git` \
+`cd habit-tracker` \
+`make` \
+> The Makefile is configured for **C++23** and links against FTXUI. It wraps CMake and autoatically handles FTXUI dependencies
+### Cmake
+`git clone https://github.com/OxidizedToast/habit-tracker.git` \
+`mkdir build` \
+`cd build` \
+`cmake ..` \
+`cmake --build` \
 
-`git clone https://github.com/OxidizedToast/habit-tracker.git`
-`cd habit-tracker`
-`make`
-
-> The Makefile is configured for **C++23** and links against FTXUI.
-
+> CMake is configured for **C++23** and automatically fetches and links FTXUI if it's not installed system-wide 
 Run the program:
-
+`cd build` \
 `./ht`
 
 ---
@@ -60,20 +66,22 @@ Usage: ht [flag]\n"
 * [ ] Save/load habit history more efficiently
 * [ ] Improve TUI navigation and usability
 * [x] Add version display inside the app
+* [x] Fix project file structure
 
 ---
 
 ## Requirements
 
 * C++23 compiler (e.g., `g++`)
-* [FTXUI](https://github.com/ArthurSonzogni/FTXUI)
-* Make (for building)
+* [FTXUI](https://github.com/ArthurSonzogni/FTXUI) -- Automatically fetched by CMake if not installed
+* Cmake (for building and managing dependencies)
+* Make (only if using Makefile wrapper)
 
 ---
 
 ## Versioning
 
-Current version: `0.3.1` (Beta)
+Current version: `0.4.0` (Beta)
 
 Follows [Semantic Versioning](https://semver.org/):
 
