@@ -60,11 +60,11 @@ Usage: ht [flag]\n"
 
 ## Roadmap / TODO
 
-* [ ] Add, edit, and remove habits
+* [x] Add, edit, and remove habits
 * [ ] Track habits daily
 * [ ] Display streaks and completion statistics
-* [ ] Save/load habit history more efficiently
-* [ ] Improve TUI navigation and usability
+* [x] Save/load habit history more efficiently
+* [x] Improve TUI navigation and usability
 * [x] Add version display inside the app
 * [x] Fix project file structure
 
@@ -81,7 +81,7 @@ Usage: ht [flag]\n"
 
 ## Versioning
 
-Current version: `0.4.0` (Beta)
+Current version: `1.0.0` (Beta)
 
 Follows [Semantic Versioning](https://semver.org/):
 
