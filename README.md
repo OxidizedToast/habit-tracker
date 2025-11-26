@@ -22,19 +22,19 @@ Clone the repository and build the project using the Makefile or Cmake:
 ### Makefile
 `git clone https://github.com/OxidizedToast/habit-tracker.git` \
 `cd habit-tracker` \
-`make` \
+`make`
 > The Makefile is configured for **C++23** and links against FTXUI. It wraps CMake and autoatically handles FTXUI dependencies
 ### Cmake
 `git clone https://github.com/OxidizedToast/habit-tracker.git` \
 `mkdir build` \
 `cd build` \
 `cmake ..` \
-`cmake --build` \
+`cmake --build` 
 
 > CMake is configured for **C++23** and automatically fetches and links FTXUI if it's not installed system-wide 
-Run the program:
-`cd build` \
-`./ht`
+### Run the program:
+`cd build`\
+`./ht` 
 
 ---
 
