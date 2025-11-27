@@ -3,7 +3,8 @@
 A terminal-based **habit tracker and planner** written in **C++23** using [FTXUI](https://github.com/ArthurSonzogni/FTXUI). Track and manage your daily habits through an interactive terminal interface.
 
 ---
-[![Habit Tracker CI](https://github.com/OxidizedToast/habit-tracker/actions/workflows/c-cpp.yml/badge.svg)](https://github.com/OxidizedToast/habit-tracker/actions/workflows/c-cpp.yml)
+![Latest Release](https://img.shields.io/github/v/release/OxidizedToast/habit-tracker?label=version)
+ [![Habit Tracker CI](https://github.com/OxidizedToast/habit-tracker/actions/workflows/c-cpp.yml/badge.svg)](https://github.com/OxidizedToast/habit-tracker/actions/workflows/c-cpp.yml) 
 
 ## Features
 
@@ -78,18 +79,6 @@ Usage: ht [flag]\n"
 * [FTXUI](https://github.com/ArthurSonzogni/FTXUI) 
 * Cmake (for building and managing dependencies)
 * Make (only if using Makefile wrapper)
-
----
-
-## Versioning
-
-Current version: `1.0.1` (Release)
-
-Follows [Semantic Versioning](https://semver.org/):
-
-* **MAJOR**: breaking changes
-* **MINOR**: new features
-* **PATCH**: bug fixes
 
 ---
 
