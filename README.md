@@ -29,10 +29,14 @@ Clone the repository and build the project using the Makefile or Cmake:
 `cmake ..` \
 `cmake --build .`
 
+### [AUR](https://aur.archlinux.org/packages/habit-tracker)
+`paru -Sy habit-tracker`
+> Although there is another habit-tracker named habit-tracker-bin, that is not my project so make sure to install correct program
+
 > CMake is configured for **C++23** and automatically fetches and links FTXUI if it's not installed system-wide 
 Run the program:
 `cd build` \
-`./ht`
+`./habit-tracker`
 
 ---
 
