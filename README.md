@@ -4,7 +4,14 @@ A terminal-based **habit tracker and planner** written in **C++23** using [FTXUI
 
 ---
 ![Latest Release](https://img.shields.io/github/v/release/OxidizedToast/habit-tracker?label=version)
- [![Habit Tracker CI](https://github.com/OxidizedToast/habit-tracker/actions/workflows/c-cpp.yml/badge.svg)](https://github.com/OxidizedToast/habit-tracker/actions/workflows/c-cpp.yml) 
+![Build Status](https://github.com/OxidizedToast/habit-tracker/actions/workflows/c-cpp.yml/badge.svg)
+![License](https://img.shields.io/github/license/OxidizedToast/habit-tracker)
+![Contributors](https://img.shields.io/github/contributors/OxidizedToast/habit-tracker)
+![Last Commit](https://img.shields.io/github/last-commit/OxidizedToast/habit-tracker)
+![Open Issues](https://img.shields.io/github/issues/OxidizedToast/habit-tracker)
+![GitHub stars](https://img.shields.io/github/stars/OxidizedToast/habit-tracker?style=social)
+![GitHub forks](https://img.shields.io/github/forks/OxidizedToast/habit-tracker?style=social)
+
 
 ## Features
 
