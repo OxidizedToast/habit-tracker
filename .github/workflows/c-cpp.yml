@@ -24,13 +24,8 @@ jobs:
         sudo apt install -y g++-14
         sudo update-alternatives --install /usr/bin/g++ g++ /usr/bin/g++-14 100
 
-        # Build FTXUI
-        git clone --recursive https://github.com/ArthurSonzogni/FTXUI.git
-        cd FTXUI
-        cmake -B build -S .
-        cmake --build build
-        sudo cmake --install build
-        cd ..
+    - name: Configure CMake
+      run: cmake -S . -B build
 
     - name: Build Habit Tracker
-      run: make
+      run: cmake --build build
