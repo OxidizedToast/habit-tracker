@@ -15,7 +15,7 @@
 #include "ftxui/component/component.hpp"           // for Menu
 #include "ftxui/component/component_options.hpp"   // for MenuOption
 #include "ftxui/component/screen_interactive.hpp"  // for ScreenInteractive
-#include "version.hpp"
+#include "version.hpp" // Created upon build only used to manage version
 
 // NOTE: The if statements do nothing but just make code easier for me to read
 void check_file_exists(const std::string& file_path) {
