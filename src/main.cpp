@@ -15,12 +15,11 @@
 #include "ftxui/component/component.hpp"           // for Menu
 #include "ftxui/component/component_options.hpp"   // for MenuOption
 #include "ftxui/component/screen_interactive.hpp"  // for ScreenInteractive
-#include "version.hpp" // Created upon build only used to manage version
+#include "version.hpp"  // Created upon build only used to manage version
 
 // NOTE: The if statements do nothing but just make code easier for me to read
-void check_file_exists(const std::string& file_path) {
-  if (std::filesystem::exists(file_path)) {
-  } else {
+void create_project_file(const std::string& file_path) {
+  if (!std::filesystem::exists(file_path)) {
     std::ofstream new_file(file_path);
     if (!new_file) {
       std::println("Failed to create config/habit file!");
@@ -30,11 +29,11 @@ void check_file_exists(const std::string& file_path) {
 }
 
 // NOTE: The if statements do nothing but just make code easier for me to read
-void check_dir_exists(const std::string& dir, const std::string& file_path) {
-  if (std::filesystem::exists(dir) && std::filesystem::is_directory(dir)) {
-  } else {
+void create_project_directory(const std::string& dir,
+                              const std::string& file_path) {
+  if (!std::filesystem::exists(dir) && !std::filesystem::is_directory(dir)) {
     std::filesystem::create_directory(dir);
-    check_file_exists(file_path);
+    create_project_file(file_path);
   }
 }
 
@@ -100,8 +99,8 @@ int main(int argc, char* argv[]) {
   std::string habit_dir_path = std::string("/home/") + user + "/.config/ht";
   std::string habit_file_path = habit_dir_path + "/habits.txt";
 
-  check_dir_exists(habit_dir_path, habit_file_path);
-  check_file_exists(habit_file_path);
+  create_project_directory(habit_dir_path, habit_file_path);
+  create_project_file(habit_file_path);
 
   // NOTE: start of code for tui interface
   std::vector<std::string> entries = {"Read Habits", "Edit Habits", "Quit"};
