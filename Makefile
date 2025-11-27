@@ -1,4 +1,4 @@
-# Makefile for building project with automatic FTXUI fetch via CMake
+# Makefile for building project with CMake
 
 # Build directory
 BUILD_DIR = build

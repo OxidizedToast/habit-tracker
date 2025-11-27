@@ -20,14 +20,14 @@ Clone the repository and build the project using the Makefile or Cmake:
 ### Makefile
 `git clone https://github.com/OxidizedToast/habit-tracker.git` \
 `cd habit-tracker` \
-`make` \
+`make`
 > The Makefile is configured for **C++23** and links against FTXUI. It wraps CMake and autoatically handles FTXUI dependencies
 ### Cmake
 `git clone https://github.com/OxidizedToast/habit-tracker.git` \
 `mkdir build` \
 `cd build` \
 `cmake ..` \
-`cmake --build` \
+`cmake --build .`
 
 > CMake is configured for **C++23** and automatically fetches and links FTXUI if it's not installed system-wide 
 Run the program:
@@ -71,7 +71,7 @@ Usage: ht [flag]\n"
 ## Requirements
 
 * C++23 compiler (e.g., `g++`)
-* [FTXUI](https://github.com/ArthurSonzogni/FTXUI) -- Automatically fetched by CMake if not installed
+* [FTXUI](https://github.com/ArthurSonzogni/FTXUI) 
 * Cmake (for building and managing dependencies)
 * Make (only if using Makefile wrapper)
 
@@ -79,7 +79,7 @@ Usage: ht [flag]\n"
 
 ## Versioning
 
-Current version: `1.0.0` (Release)
+Current version: `1.0.1` (Release)
 
 Follows [Semantic Versioning](https://semver.org/):
 
@@ -96,9 +96,3 @@ Contributions are welcome! You can:
 * Submit issues for bugs or feature requests
 * Fork the repository and create pull requests
 * Suggest improvements or optimizations
-
----
-
-## License
-
-This project is licensed under the MIT License. See the LICENSE file for details.

@@ -1,32 +1,31 @@
 cmake_minimum_required(VERSION 3.16)
-project(ht LANGUAGES CXX)
 
+# Project info
+project(
+  habit-tracker
+  VERSION 1.0.1
+  LANGUAGES CXX)
+
+# Use C++23
 set(CMAKE_CXX_STANDARD 23)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
+set(CMAKE_CXX_EXTENSIONS OFF)
 
-# --- Source files ---
-file(GLOB_RECURSE SOURCES src/*.cpp)
+# Add FTXUI as a subdirectory (replace with your path if different)
+add_subdirectory(deps/ftxui EXCLUDE_FROM_ALL)
 
-# --- Executable ---
-add_executable(ht ${SOURCES})
+# Generate version.hpp from version.hpp.in
+configure_file("${CMAKE_SOURCE_DIR}/version.hpp.in"
+               "${CMAKE_BINARY_DIR}/version.hpp" @ONLY)
 
-# --- Include your headers ---
-target_include_directories(ht PRIVATE include)
+# Include the generated header
+include_directories("${CMAKE_BINARY_DIR}")
 
-# --- Try to find system FTXUI first ---
-find_package(ftxui QUIET)
+# Add your executable
+add_executable(
+  habit-tracker src/main.cpp # add other source files here if you have them
+)
 
-if(ftxui_FOUND)
-  message(STATUS "Using system-installed FTXUI")
-else()
-  message(STATUS "System FTXUI not found, fetching FTXUI...")
-  include(FetchContent)
-  FetchContent_Declare(
-    ftxui
-    GIT_REPOSITORY https://github.com/ArthurSonzogni/FTXUI.git
-    GIT_TAG v6.1.9)
-  FetchContent_MakeAvailable(ftxui)
-endif()
-
-# --- Link FTXUI modules ---
-target_link_libraries(ht PRIVATE ftxui::screen ftxui::dom ftxui::component)
+# Link FTXUI
+target_link_libraries(habit-tracker PRIVATE ftxui::screen ftxui::dom
+                                            ftxui::component)
