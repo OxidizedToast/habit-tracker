@@ -4,7 +4,7 @@
 BUILD_DIR = build
 
 # Target executable name
-TARGET = ht
+TARGET = habit-tracker
 
 # --- Default: build the project ---
 all:

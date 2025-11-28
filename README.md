@@ -26,11 +26,12 @@ A terminal-based **habit tracker and planner** written in **C++23** using [FTXUI
 
 Clone the repository and build the project using the Makefile or Cmake:
 ### Makefile
+> The Makefile is configured for **C++23** and runs the CMake file
 `git clone https://github.com/OxidizedToast/habit-tracker.git` \
 `cd habit-tracker` \
 `make`
-> The Makefile is configured for **C++23** and links against FTXUI. It wraps CMake and autoatically handles FTXUI dependencies
 ### Cmake
+> CMake is configured for **C++23** 
 `git clone https://github.com/OxidizedToast/habit-tracker.git` \
 `mkdir build` \
 `cd build` \
@@ -38,11 +39,10 @@ Clone the repository and build the project using the Makefile or Cmake:
 `cmake --build .`
 
 ### [AUR](https://aur.archlinux.org/packages/habit-tracker)
-`paru -Sy habit-tracker`
 > Although there is another habit-tracker named habit-tracker-bin, that is not my project so make sure to install correct program
+`paru -Sy habit-tracker`
 
-> CMake is configured for **C++23** and automatically fetches and links FTXUI if it's not installed system-wide 
-Run the program:
+### Run the program:
 `cd build` \
 `./habit-tracker`
 

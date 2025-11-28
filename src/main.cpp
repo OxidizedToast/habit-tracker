@@ -85,7 +85,8 @@ int main(int argc, char* argv[]) {
       std::println("Version: {}", PROJECT_VERSION_STRING);
       return 0;
     } else {
-      std::println("Option: {} not recognized", arg);
+      std::cerr << "Option: " << arg << " not recognized\n";
+      return 1;
     }
   }
   // TUI App Code
